@@ -7,6 +7,11 @@ st.write(
 home_team=st.selectbox("Home Team", ["Arsenal","Chelsea","Liverpool","Manchester United"], filter_mode=None)
 
 
-st.write(f"Home team: {home_team}")
 away_team=st.selectbox("Away Team", ["Arsenal", "Chelsea","Liverpool","Manchester United"], filter_mode=None)
-st.write(f"Away team: {away_team}")
+
+
+if home_team == away_team:
+    st.warning("Please pick two different teams!")
+else:
+    st.success(f"Valid Matchup: {home_team} vs {away_team}")
+    
